@@ -1,33 +1,20 @@
-# Svelte Vite Starter
+# Wedington Photography
 
-A starter template for [Svelte](https://svelte.dev) that comes preconfigured with [Vite](https://vitejs.dev/),
-TypeScript, SCSS, Babel, Autoprefixer, and HMR.
+Svelte, TypeScript, SCSS, Babel, Autoprefixer, and HMR.
 
-- [Getting started](#getting-started)
-  - [Installation](#installation)
-  - [Starting the development server](#starting-the-development-server)
-  - [Building for production](#building-for-production)
-- [Usage](#usage)
-  - [Global stylesheets](#global-stylesheets)
-  - [Browsers list](#browsers-list)
-  - [Babel customization](#babel-customization)
-  - [Source maps in production](#source-maps-in-production)
-  - [Import path aliases](#import-path-aliases)
-
-> ⚠ **Consider trying the new vite-based [SvelteKit](https://kit.svelte.dev/)!**
-
----
+- [Wedington Photography](#wedington-photography)
+  - [Getting started](#getting-started)
+    - [Starting the development server](#starting-the-development-server)
+    - [Building for production](#building-for-production)
+  - [Usage](#usage)
+    - [Global stylesheets](#global-stylesheets)
+    - [Browsers list](#browsers-list)
+    - [Babel customization](#babel-customization)
+    - [Source maps in production](#source-maps-in-production)
+    - [Import path aliases](#import-path-aliases)
+  - [Contributing](#contributing)
 
 ## Getting started
-
-### Installation
-
-Pull the template files with [`degit`](https://github.com/Rich-Harris/degit) and install dependencies.
-
-```bash
-npx degit baileyherbert/svelte-vite-starter
-npm install
-```
 
 ### Starting the development server
 
@@ -103,7 +90,7 @@ Define import path aliases from the `tsconfig.json` file. For example:
 ```json
 "paths": {
     "src/*": ["src/*"],
-    "@stores/*": ["src/stores/*"]
+    "@styles/*": ["src/styles/*"]
 }
 ```
 
@@ -111,12 +98,18 @@ You can then import files under these aliases and Vite will resolve them. Your c
 for automatic imports:
 
 ```ts
-import { users } from '@stores/users'; // src/stores/users.ts
+import '@styles/typography'; // src/styles/_typography.scss
+import SomeComponent from '@components/SomeComponent';
 ```
 
 The root directory is configured as a base path for imports. This means you can also import modules with an absolute
 path from anywhere in the project instead of using a large number of `..` to traverse directories.
 
 ```ts
-import { users } from 'src/stores/users';
+import '@src/styles/typography'; // src/styles/_typography.scss
+import SomeComponent from '@src/components/SomeComponent';
 ```
+
+## Contributing
+
+Please read `CONTRIBUTING.md` for more verbose details about the project and to find contact information to get involved.

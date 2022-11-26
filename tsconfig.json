@@ -12,7 +12,8 @@
 		"strict": false,
 		"baseUrl": ".",
 		"paths": {
-			"src/*": ["src/*"]
+			"@src/*": ["src/*"],
+			"@styles": ["src/styles/*"]
 		},
 		"types": [
 			"svelte",
