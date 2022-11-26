@@ -17,5 +17,11 @@
 	},
 	"browserslist": [
 		"defaults"
-	]
+	],
+	"dependencies": {
+		"@fortawesome/free-solid-svg-icons": "^6.2.1",
+		"install": "^0.13.0",
+		"npm": "^9.1.2",
+		"svelte-fa": "^3.0.3"
+	}
 }
