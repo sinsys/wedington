@@ -16,14 +16,14 @@ body {
 }
 
 a {
-	color: $color-contrast-second;
+	color: $color-lgray;
 	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
 
 	&:visited {
 		color: $color-contrast-first;
+	}
+
+	&:hover {
+		color: $color-extra-lilac;
 	}
 }
