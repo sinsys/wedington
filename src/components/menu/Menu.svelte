@@ -1,8 +1,9 @@
 <!-- Menu Wrapper Component -->
 <script lang="ts">
-  import { slide, SlideParams } from 'svelte/transition'
+  import { slide, SlideParams, fade } from 'svelte/transition'
   import { cubicOut } from 'svelte/easing'
 
+  import { animateDuration } from '@services/static'
   import { menu } from '@services/store'
 
   import Tile from '@components/menu/Tile.svelte'
@@ -15,30 +16,34 @@
    * @param node - Wrapper HTML Element
    * @param options - Svelte Slide parameters
    */
-	function fadeSlide(node: Element, options: SlideParams) {
-		const slideTrans = slide(node, options)
-		return {
-			duration: options.duration,
+  const fadeSlide = (node: Element, options?: SlideParams) => {
+    const slideTransition = slide(node, options)
+    return {
+      duration: animateDuration,
       easing: cubicOut,
-			css: (t: number) => `
-				${slideTrans.css(t, 0)}
-				opacity: ${t};
-			`
-		};
-	}
+      css: (t: number) => `
+        ${slideTransition.css(t, 0)}
+        opacity: ${t}
+      `
+    }
+  }
 </script>
 
 {#if visible}
-  <nav id="menu" transition:fadeSlide="{{duration: 500}}">
+  <nav id="menu"
+    in:fadeSlide="{{duration: animateDuration}}" out:fade>
+
     <Tile label="About" />
     <Tile label="Portfolio" />
     <Tile label="Booking" />
     <Tile label="Contact" />
     <Tile label="Login" login="{true}" />
+
   </nav>
 {/if}
 
 <style lang="scss">
+  @import '../../styles/transitions';
   #menu {
     overflow: hidden;
     position: absolute;
@@ -51,6 +56,6 @@
     justify-content: space-evenly;
     flex-direction: column;
     opacity: 0.8;
-    transition: all 0.3s ease-in-out;
+    @include transition-ease-in-out;
   }
 </style>

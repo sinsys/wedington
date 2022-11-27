@@ -1,11 +1,15 @@
 <!-- Single Tile in the Menu -->
 <script lang="ts">
   import { menu } from '@services/store'
+
   export let label: string
   export let login: boolean = false
 </script>
 
-<div class="nav-tile {login ? 'login' : ''}" on:click={menu.toggle} on:keydown={menu.toggle}>
+<div class="nav-tile {login ? 'login' : ''}"
+  on:click={menu.toggle}
+  on:keydown={menu.toggle}>
+
   <span>{label}</span>
 </div>
 
@@ -13,6 +17,7 @@
   @import '../../styles/colors';
   @import '../../styles/typography';
   @import '../../styles/transitions';
+
   .nav-tile {
     clip-path: polygon(0% 0%, 15% 85%, 100% 100%, 100% 0%);
     width: 100%;

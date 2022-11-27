@@ -1,7 +1,8 @@
 <!-- Header wrapper component -->
 <script lang="ts">
-  import MenuToggle from '@components/MenuToggle.svelte'
   import { title } from '@services/static'
+
+  import MenuToggle from '@components/MenuToggle.svelte'
 </script>
 
 <header id="app-header">
@@ -12,6 +13,7 @@
 <style lang="scss">
   @import '../styles/colors';
   @import '../styles/typography';
+
   #app-header {
     position: relative;
     z-index: 100;
