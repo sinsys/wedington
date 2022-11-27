@@ -3,14 +3,10 @@
   import Fa from 'svelte-fa/src/fa.svelte'
   import { faBars } from '@fortawesome/free-solid-svg-icons'
   import { menu } from '@services/store'
-
-  function toggleMenu () {
-    menu.toggle()
-  }
 </script>
 
 <nav>
-  <div class="menu-toggle" role="button" on:click={toggleMenu} on:keydown={toggleMenu}>
+  <div class="menu-toggle" role="button" on:click={menu.toggle} on:keydown={menu.toggle}>
     <span>Menu</span>
     <Fa class="icon" icon={faBars} style="margin-right: 0.5rem" />
   </div>
