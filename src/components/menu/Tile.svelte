@@ -11,12 +11,12 @@
 <style lang="scss">
   @import '../../styles/colors';
   @import '../../styles/typography';
-
+  @import '../../styles/transitions';
   .nav-tile {
     clip-path: polygon(0% 0%, 15% 85%, 100% 100%, 100% 0%);
     width: 100%;
     background: $color-extra-deep-purple;
-    transition: all 0.3s ease-in-out;
+    @include transition-ease-in-out;
     transform: scale(1);
     cursor: pointer;
 
@@ -27,7 +27,7 @@
       @include font-krona-one;
       display: block;
       width: 100%;
-      transition: all 0.3s ease-in-out;
+      @include transition-ease-in-out;
     }
 
     &:hover {

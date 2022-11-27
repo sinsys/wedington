@@ -44,6 +44,6 @@
     justify-content: space-evenly;
     flex-direction: column;
     opacity: 0.8;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 </style>

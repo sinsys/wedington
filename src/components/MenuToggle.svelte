@@ -19,10 +19,11 @@
 <style lang="scss">
   @import '../styles/colors';
   @import '../styles/typography';
+  @import '../styles/transitions';
   .menu-toggle {
     text-decoration: none;
     color: $color-white;
-    transition: all 0.3s ease-in-out;
+    @include transition-ease-in-out;
     cursor: pointer;
 
     span {
@@ -33,7 +34,7 @@
       text-decoration: none;
       font-weight: bold;
       text-transform: uppercase;
-      transition: all 0.3s ease-in-out;
+      @include transition-ease-in-out;
     }
 
     &:hover span {
