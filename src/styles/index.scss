@@ -1,5 +1,8 @@
+/* Base, global stylesheet */
 @import '@styles/typography';
 @import '@styles/colors';
+@import '@styles/transitions';
+
 html, body {
 	position: relative;
 	min-width: 100vw;
@@ -16,14 +19,14 @@ body {
 }
 
 a {
-	color: $color-contrast-second;
+	color: $color-lgray;
 	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
 
 	&:visited {
 		color: $color-contrast-first;
+	}
+
+	&:hover {
+		color: $color-extra-lilac;
 	}
 }
