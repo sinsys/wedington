@@ -1,17 +1,13 @@
 <script lang="ts">
-  import Fa from 'svelte-fa/src/fa.svelte'
-  import { faBars } from '@fortawesome/free-solid-svg-icons'
-  export let title: string
+  import MenuToggle from '@components/MenuToggle.svelte'
+  import { title } from '@services/static'
+
+  let headerTitle = title
 </script>
 
 <header id="app-header">
-  <h2>{title}</h2>
-  <nav>
-    <div class="menu-toggle" role="button">
-      <span>Menu</span>
-      <Fa class="icon" icon={faBars} style="margin-right: 0.5rem" />
-    </div>
-  </nav>
+  <h2>{headerTitle}</h2>
+  <MenuToggle />
 </header>
 
 <style lang="scss">
@@ -34,32 +30,5 @@
       padding: 1rem;
       margin: 0;
     }
-
-    nav {
-      .menu-toggle {
-        text-decoration: none;
-        color: $color-white;
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-      }
-
-      span {
-        display: inline;
-        padding: 1rem;
-        padding-right: 0.5rem;
-        @include font-krona-one;
-        text-decoration: none;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: all 0.3s ease-in-out;
-      }
-
-      &:hover, &.active {
-        span {
-          color: $color-contrast-second;
-        }
-      }
-    }
-    
   }
 </style>

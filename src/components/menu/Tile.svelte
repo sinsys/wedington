@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { menu } from '@services/store'
   export let label: string
   export let login: boolean = false
 </script>
 
-<div class="nav-tile {login ? 'login' : ''}">
+<div class="nav-tile {login ? 'login' : ''}" on:click={menu.toggle} on:keydown={menu.toggle}>
   <span>{label}</span>
 </div>
 
@@ -27,10 +28,6 @@
       display: block;
       width: 100%;
       transition: all 0.3s ease-in-out;
-
-      &.login {
-        color: $color-contrast-first;
-      }
     }
 
     &:hover {
@@ -40,10 +37,6 @@
       span {
         color: $color-near-black;
         background: $color-contrast-second;
-
-        &.login {
-          color: $color-near-white;
-        }
       }
     }
 
