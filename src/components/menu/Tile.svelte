@@ -41,7 +41,7 @@
       transform: scale(1.25);
       
       span {
-        color: $color-near-black;
+        color: $color-near-white;
         background: $color-contrast-second;
       }
     }
