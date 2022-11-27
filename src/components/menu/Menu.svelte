@@ -1,6 +1,6 @@
 <!-- Menu Wrapper Component -->
 <script lang="ts">
-  import { slide, SlideParams } from 'svelte/transition'
+  import { slide, fade } from 'svelte/transition'
   import { cubicOut } from 'svelte/easing'
 
   import { animateDuration } from '@services/static'
@@ -17,13 +17,16 @@
    * @param node - Wrapper HTML Element
    * @param options - Svelte Slide parameters
    */
-   const fadeSlide = (node: Element, options?: SlideParams) => {
-    const slideTransition = slide(node, options)
+   const fadeSlide = (node: Element) => {
+    const slideTransition = slide(node, {
+      duration: animateDuration * animateDurationMultiplier
+    })
     return {
       duration: animateDuration,
       easing: cubicOut,
       css: (tick: number) => `
-        ${slideTransition.css(tick, 0)}
+        ${slideTransition.css(tick, 0)};
+        opacity: ${tick * 100};
       `
     }
   }
@@ -32,10 +35,11 @@
 {#if visible}
   <div id="overlay-wrapper"
     on:click={menu.toggle}
-    on:keydown={menu.toggle}>
-
+    on:keydown={menu.toggle}
+    transition:fade>
+    
     <nav id="menu"
-      transition:fadeSlide="{{duration: animateDuration * animateDurationMultiplier}}">
+      transition:fadeSlide>
 
       <Tile label="About" />
       <Tile label="Portfolio" />
@@ -68,7 +72,5 @@
     align-items: flex-end;
     justify-content: space-evenly;
     flex-direction: column;
-    opacity: 0.8;
-    @include transition-ease-in-out;
   }
 </style>
