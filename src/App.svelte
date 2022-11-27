@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Header from '@components/Header.svelte'
 	import Menu from '@components/menu/Menu.svelte'
-	import { title } from '@services/static'
 </script>
 
 <main id="app-wrapper">
