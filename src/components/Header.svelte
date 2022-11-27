@@ -22,7 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(0deg, $color-extra-deep-purple, 70%, $color-extra-lilac);
+    background: linear-gradient(0deg, $color-near-black, 70%, $color-contrast-third);
 		box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
 
     h2 {
