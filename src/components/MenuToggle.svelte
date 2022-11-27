@@ -19,6 +19,8 @@
   @import '../styles/transitions';
 
   .menu-toggle {
+    position: relative;
+    z-index: 10000;
     display: flex;
     flex-direction: row;
     align-items: center;

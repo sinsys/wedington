@@ -6,9 +6,7 @@
   export let login: boolean = false
 </script>
 
-<div class="nav-tile {login ? 'login' : ''}"
-  on:click={menu.toggle}
-  on:keydown={menu.toggle}>
+<div class="nav-tile {login ? 'login' : ''}">
 
   <span>{label}</span>
 </div>
@@ -19,11 +17,13 @@
   @import '../../styles/transitions';
 
   .nav-tile {
+    position: relative;
+    z-index: 1000;
     clip-path: polygon(0% 0%, 15% 85%, 100% 100%, 100% 0%);
     width: 100%;
     background: $color-extra-deep-purple;
     @include transition-ease-in-out;
-    transform: scale(1);
+    transform: scale(1) translateX(0);
     cursor: pointer;
 
     span {
@@ -38,7 +38,7 @@
 
     &:hover {
       clip-path: polygon(15% 15%, 15% 85%, 100% 100%, 100% 0%);
-      transform: scale(1.25);
+      transform: scale(1.25) translateX(-1.5rem);
       
       span {
         background: $color-near-black;
