@@ -1,24 +1,31 @@
+<!-- Menu Wrapper Component -->
 <script lang="ts">
-  import { slide } from 'svelte/transition'
+  import { slide, SlideParams } from 'svelte/transition'
   import { cubicOut } from 'svelte/easing'
-  import Tile from '@components/menu/Tile.svelte'
+
   import { menu } from '@services/store'
+
+  import Tile from '@components/menu/Tile.svelte'
 
   let visible: boolean = false
   menu.subscribe(v => visible = v)
 
-	function fadeSlide(node, options) {
+  /**
+   * Animates the menu in and out
+   * @param node - Wrapper HTML Element
+   * @param options - Svelte Slide parameters
+   */
+	function fadeSlide(node: Element, options: SlideParams) {
 		const slideTrans = slide(node, options)
 		return {
 			duration: options.duration,
       easing: cubicOut,
-			css: t => `
+			css: (t: number) => `
 				${slideTrans.css(t, 0)}
 				opacity: ${t};
 			`
 		};
 	}
-
 </script>
 
 {#if visible}

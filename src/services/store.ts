@@ -1,3 +1,4 @@
+/* Dynamic state management for the app */
 import { writable } from 'svelte/store';
 
 export const createMenu = () => {

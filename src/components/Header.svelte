@@ -1,3 +1,4 @@
+<!-- Header wrapper component -->
 <script lang="ts">
   import MenuToggle from '@components/MenuToggle.svelte'
   import { title } from '@services/static'

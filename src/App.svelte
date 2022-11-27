@@ -1,3 +1,4 @@
+<!-- Root application Component -->
 <script lang="ts">
 	import Header from '@components/Header.svelte'
 	import Menu from '@components/menu/Menu.svelte'

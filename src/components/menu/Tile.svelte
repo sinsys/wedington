@@ -1,3 +1,4 @@
+<!-- Single Tile in the Menu -->
 <script lang="ts">
   import { menu } from '@services/store'
   export let label: string

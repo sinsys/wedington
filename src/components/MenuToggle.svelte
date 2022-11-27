@@ -1,4 +1,4 @@
-
+<!-- Button to toggle menu state -->
 <script lang="ts">
   import Fa from 'svelte-fa/src/fa.svelte'
   import { faBars } from '@fortawesome/free-solid-svg-icons'

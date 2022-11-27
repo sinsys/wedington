@@ -1,3 +1,4 @@
+/* Root application entry point */
 import App from '@src/App.svelte';
 
 const app = new App({
