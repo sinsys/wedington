@@ -47,7 +47,7 @@
   #menu {
     overflow: hidden;
     position: absolute;
-    top: 5rem;
+    top: 3.5rem;
     right: 0;
     bottom: 0;
     z-index: 10;

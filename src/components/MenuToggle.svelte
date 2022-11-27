@@ -19,6 +19,10 @@
   @import '../styles/transitions';
 
   .menu-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: $color-white;
     @include transition-ease-in-out;
