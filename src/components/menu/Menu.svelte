@@ -41,11 +41,11 @@
     <nav id="menu"
       transition:fadeSlide>
 
-      <Tile label="About" />
-      <Tile label="Portfolio" />
-      <Tile label="Booking" />
-      <Tile label="Contact" />
-      <Tile label="Login" login="{true}" />
+      <Tile label="About" routePath={"/"} />
+      <Tile label="Portfolio" routePath={"/portfolio"} />
+      <Tile label="Booking" routePath={"/booking"} />
+      <Tile label="Contact" routePath={"/contact"} />
+      <Tile label="Login" routePath={"/login"} login="{true}" />
 
     </nav>
   </div>

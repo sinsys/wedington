@@ -2,11 +2,13 @@
 <script lang="ts">
 	import Header from '@components/Header.svelte'
 	import Menu from '@components/menu/Menu.svelte'
+	import Public from '@src/routing/Public.svelte'
 </script>
 
 <main id="app-wrapper">
 	<Header />
 	<Menu />
+	<Public />
 </main>
 
 <style lang="scss">
@@ -19,7 +21,8 @@
 		width: 100vw;
 		height: 100vh;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
+		flex-direction: column;
 		align-items: flex-start;
 	}
 </style>
