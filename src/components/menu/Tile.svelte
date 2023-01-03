@@ -1,15 +1,13 @@
 <!-- Single Tile in the Menu -->
 <script lang="ts">
-  import { menu } from '@services/store'
-
   export let label: string
   export let login: boolean = false
+  export let routePath: string
 </script>
 
-<div class="nav-tile {login ? 'login' : ''}">
-
+<a href="{routePath}" class="nav-tile {login ? 'login' : ''}">
   <span>{label}</span>
-</div>
+</a>
 
 <style lang="scss">
   @import '../../styles/colors';
