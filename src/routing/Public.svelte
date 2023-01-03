@@ -11,10 +11,10 @@
 
   /* Listen for transition events to allow existing processing to complete */
 	transitionQueue.subscribe(queue => {
-		while (queue.eventQueue.length > 0) {
-			console.log('Processing event!', queue.eventQueue[0])
-			transitionQueue.processNext()
-		}
+    while (queue.eventQueue.length > 0) {
+      console.log('Processing event!', queue.eventQueue[0])
+      transitionQueue.processNext()
+    }
 	})
 
   /* Listen for router events to publish changes in page */

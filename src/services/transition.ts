@@ -26,6 +26,7 @@ interface ITransitionContext {
   processed: ITransitionResult[]
 }
 
+/* Data Store for transition orchestration */
 interface ITransitionQueue {
   subscribe: (this: void, run: Subscriber<ITransitionContext>) => Unsubscriber
   addToQueue: (req: ITransitionRequest) => void

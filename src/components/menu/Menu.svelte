@@ -26,7 +26,6 @@
   /**
    * Animates the menu
    * @param node - Wrapper HTML Element
-   * @param options - Svelte Slide parameters
    */
    const fadeSlide = (node: Element) => {
     const slideTransition = slide(node, {
