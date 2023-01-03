@@ -2,8 +2,7 @@
 <script lang="ts">
   import Fa from 'svelte-fa/src/fa.svelte'
   import { faBars } from '@fortawesome/free-solid-svg-icons'
-
-  import { menu } from '@services/store'
+  import { menu } from '@services/menu'
 </script>
 
 <nav>
